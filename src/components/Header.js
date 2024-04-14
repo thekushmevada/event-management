@@ -15,11 +15,12 @@ const Header = () => {
           <Link to="/">Event Management</Link>
         </div>
         <nav className={`md:flex md:space-x-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
-            <Link to="/" className="text-white hover:underline">Home</Link>
+          <Link to="/" className="text-white hover:underline">Home</Link>
           <Link to="/events" className="text-white hover:underline">Events</Link>
           <Link to="/services" className="text-white hover:underline">Services</Link>
           <Link to="/about-us" className="text-white hover:underline">About Us</Link>
           <Link to="/contact" className="text-white hover:underline">Contact</Link>
+          <li><Link to="/auth" className="text-white hover:underline">Login</Link></li>
         </nav>
         <div className="md:hidden">
           <button className="text-white focus:outline-none" onClick={toggleMenu}>

@@ -7,6 +7,7 @@ import ServicesPage from "./Pages/Services";
 import AboutUsPage from "./Pages/AboutUs";
 import ContactPage from "./Pages/Contact";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import AuthForm from "./Pages/Authentication";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/auth" element={<AuthForm />} />
           </Routes>
         <Footer />
       </Router>    
