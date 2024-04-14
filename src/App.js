@@ -6,10 +6,12 @@ import EventsPage from "./Pages/Events";
 import ServicesPage from "./Pages/Services";
 import AboutUsPage from "./Pages/AboutUs";
 import ContactPage from "./Pages/Contact";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
     <div className="App">
+      <SpeedInsights />
       <Router>
         <Header />
           <Routes>
