@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // If using React Router
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom'; 
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { isAuthenticated, logout } = useContext(AuthContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,7 +23,16 @@ const Header = () => {
           <Link to="/services" className="text-white hover:underline">Services</Link>
           <Link to="/about-us" className="text-white hover:underline">About Us</Link>
           <Link to="/contact" className="text-white hover:underline">Contact</Link>
-          <li><Link to="/auth" className="text-white hover:underline">Login</Link></li>
+          {/* <li><Link to="/auth" className="text-white hover:underline">Login</Link></li> */}
+          
+          
+          {isAuthenticated ? (
+            <li><button onClick={logout} className="text-white hover:underline focus:outline-none">Logout</button></li>
+          ) : (
+            <li><Link to="/auth" className="text-white hover:underline">Login</Link></li>
+          )}
+         
+          
         </nav>
         <div className="md:hidden">
           <button className="text-white focus:outline-none" onClick={toggleMenu}>

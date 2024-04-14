@@ -8,12 +8,14 @@ import AboutUsPage from "./Pages/AboutUs";
 import ContactPage from "./Pages/Contact";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import AuthForm from "./Pages/Authentication";
+import { AuthProvider } from "./Providers/AuthProvider";
 
 function App() {
   return (
     <div className="App">
       <SpeedInsights />
       <Router>
+        <AuthProvider>
         <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -24,6 +26,7 @@ function App() {
             <Route path="/auth" element={<AuthForm />} />
           </Routes>
         <Footer />
+        </AuthProvider>
       </Router>    
     </div>
   );
