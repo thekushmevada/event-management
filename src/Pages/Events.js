@@ -155,7 +155,7 @@ const EventsPage = () => {
       {/* Latest News */}
       <section className="mt-12">
         <h2 className="text-2xl font-bold mb-4">Latest News</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
             <img
               src="https://via.placeholder.com/300x200"

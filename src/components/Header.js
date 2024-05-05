@@ -15,7 +15,7 @@ const Header = () => {
     <header className="bg-gray-800 py-4 md:py-6">
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         <div className="text-white text-2xl font-bold mb-4 md:mb-0">
-          <Link to="/">Event Management</Link>
+          <Link to="/">EventElevate</Link>
         </div>
         <nav className={`md:flex md:space-x-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
           <Link to="/" className="text-white hover:underline">Home</Link>
